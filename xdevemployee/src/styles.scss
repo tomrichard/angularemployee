@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variable.scss';
+@import './assets/styles/flexbox.css';
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Poppins;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Poppins, Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+	color: #007bff;
+}
+
+.page-content {
+	padding-bottom: 16px;
+}
+
+[clickable] {
+	cursor: pointer;
+}
+
+@each $gut in $guts {
+	.pv-#{$gut} {
+		padding-top: #{$gut}px;
+		padding-bottom: #{$gut}px;
+	}
+	.ph-#{$gut} {
+		padding-left: #{$gut}px;
+		padding-right: #{$gut}px;
+	}
+	.pl-#{$gut} {
+		padding-left: #{$gut}px;
+	}
+	.pr-#{$gut} {
+		padding-right: #{$gut}px;
+	}
+	.pt-#{$gut} {
+		padding-top: #{$gut}px;
+	}
+	.pb-#{$gut} {
+		padding-bottom: #{$gut}px;
+	}
+}
+
+.btn-danger {
+	background: $color-danger;
+	color: white;
+}
+.btn-warning {
+	background: $color-warning;
+	color: #666;
+}
+.btn-primary {
+	background: $color-primary;
+	color: white;
+}
+.btn-success {
+	background: $color-success;
+	color: white;
+}
+
+.width-p-100 {
+	width: 100%;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background: #cfd1db;
+	margin-top: 4px;
+	margin-bottom: 16px;
+	opacity: 0.5;
+}

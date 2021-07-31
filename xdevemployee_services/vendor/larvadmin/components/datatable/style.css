@@ -1,0 +1,12 @@
+.table .tcheck {
+	padding: 0.30rem;
+	width: 60px;
+	text-align: center;
+}
+.table .tcheck input[type="checkbox"] {
+	cursor: pointer;
+}
+.table .no-post-found {
+	padding: 24px;
+	text-align: center;
+}

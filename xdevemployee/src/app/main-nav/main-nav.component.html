@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+      #drawer 
+      class="sidenav" 
+      fixedInViewport="false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="sidenav-top">
+      <div class="ph-32 pt-32 width-p-100">
+        <div class="personal-info">
+          <div class="avatar">
+            <div class="avatar-image">
+              <img src="https://i.pravatar.cc/100">
+            </div>
+          </div>
+          <div class="text">
+            <div class="name">Dexter</div>
+            <div class="email">example@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+    <div class="ph-32">
+      <div class="nav-divider"></div>
+    </div>
+    <mat-nav-list>
+      <div class="ph-32">
+        <a mat-list-item [routerLink]="['/home']"><i class="fa fa-home"></i>Home</a>
+        <a mat-list-item [routerLink]="['/employee']"><i class="fa fa-users"></i>Employees</a>
+      </div>
+    </mat-nav-list>
+    <div class="nav-bottom width-p-100">
+      <div class="nav-divider full"></div>
+      <div class="nav-logout">
+        <a mat-list-item [routerLink]="['/login']"><i class="fa fa-sign-out-alt"></i>Logout</a>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span> XdevEmployee</span>
+    </mat-toolbar>
+    <!--  Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

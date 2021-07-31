@@ -1,0 +1,157 @@
+<div class="page-content">
+
+	<!-- desktop -->
+	<div class="d-xs-none d-sm-none d-md-block d-lg-block">
+		<div class="search flex" style="align-items: center;">
+			<div class="ph-24 pv-8 flex width-p-100" style="justify-content: space-between;">
+				<div>
+					<span style="font-weight: bold; padding-right: 16px;">Found 10 matches</span> 
+					<label *ngIf="showSearch" 	(click)="showSearch = false" clickable class="label">Search Term <i class="fa fa-times"></i></label>
+					<label *ngIf="!showSearch" 	(click)="showSearch = true" clickable class="label">Search Term <i class="fa fa-plus"></i></label>
+				</div>
+				<div>
+					<label>Show Items : </label>
+					<select>
+						<option>10</option>
+						<option>25</option>
+						<option>50</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- mobile -->
+	<div class="d-xs-block d-sm-block d-md-none d-lg-none">
+		<div 
+			class="search flex " 
+			style="align-items: center; height: 64px;">
+			<div class="ph-24 pv-8 flex width-p-100" style="justify-content: space-between;">
+				<div>
+					<label *ngIf="showSearch" 	(click)="showSearch = false" clickable class="label">Search Term <i class="fa fa-times"></i></label>
+					<label *ngIf="!showSearch" 	(click)="showSearch = true" clickable class="label">Search Term <i class="fa fa-plus"></i></label>
+				</div>
+				<div>
+					<label>Show Items : </label>
+					<select>
+						<option>10</option>
+						<option>25</option>
+						<option>50</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row ph-24" *ngIf="showSearch">
+		<div class="pt-16 width-p-100" 
+			style="background: #eeeeee; border-radius: 5px; margin-bottom: 16px;">
+			<div class="ph-16">
+				<h4>Search : </h4>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-12 col-md-5 col-lg-5">
+					<mat-form-field appearance="legacy" class="width-p-100">
+						<mat-label>Search Name</mat-label>
+						<input matInput placeholder="Placeholder">
+						<mat-hint>Search by name</mat-hint>
+					</mat-form-field>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-12 col-md-5 col-lg-5">
+					<mat-form-field appearance="legacy" class="width-p-100">
+						<mat-label>Select Group</mat-label>
+						<mat-select>
+							<mat-option value="option">Option</mat-option>
+						</mat-select>
+						<mat-hint>Search by group</mat-hint>
+					</mat-form-field>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row ph-16">
+
+		<div *ngFor="let employee of employees" 
+			class="col-xs-12 col-md-4 col-lg-4 col-xl-3 ph-8">
+			
+			<div class="d-xs-none d-sm-none d-md-block d-lg-block">
+
+				<mat-card class="employee-card">
+					<mat-card-header>
+					</mat-card-header>
+					<div class="row center-xs pv-16">
+						<div class="rounded-image">
+							<img mat-card-image src="https://i.pravatar.cc/200" alt="employee photo">
+						</div>
+					</div>
+					<mat-card-content>
+						<div class="flex col center-xs">
+							<mat-card-title>Shiba Inu - <span class="absen-in">In</span></mat-card-title>
+							<mat-card-subtitle>HR Executive</mat-card-subtitle>
+						</div>
+						<div class="flex col start-xs">
+							<div class="divider full"></div>
+							<mat-card-subtitle>
+								<div class="pb-4">
+									<i class="fa fa-envelope"></i>
+									<a href="mailto:example@gmail.com">example@gmail.com</a>
+								</div>
+								<div class="">
+									<i class="fa fa-phone"></i>
+									<a href="tel:+62988812999">+62 988812999</a>
+								</div>
+							</mat-card-subtitle>
+						</div>
+					</mat-card-content>
+					<mat-card-actions>
+						<div class="flex center-xs pb-16">
+							<button mat-flat-button class="btn btn-warning">
+								<i class="fa fa-edit"></i>
+								<span class="btn-text">EDIT</span>
+							</button>
+							<button mat-flat-button class="btn btn-danger">
+								<i class="fa fa-trash"></i> 
+								<span class="btn-text">DELETE</span>
+							</button>
+						</div>
+					</mat-card-actions>
+				</mat-card>
+
+			</div>
+
+			<div class="d-xs-block d-sm-block d-md-none d-lg-none">
+				<mat-card class="employee-card">
+					<div class="flex" style="align-items: center;">
+						<div class="rounded-image" style="width: 50px; height: 50px;">
+							<img mat-card-image src="https://i.pravatar.cc/200" alt="employee photo">
+						</div>
+						<div style="padding-left: 16px;">
+							<mat-card-title>Shiba Inu - <span class="absen-in">In</span></mat-card-title>
+							<mat-card-subtitle style="margin: 0px;">HR Executive</mat-card-subtitle>
+						</div>
+					</div>
+					<div class="divider full" style="margin-top: 16px; margin-bottom: 8px;"></div>
+					<mat-card-actions>
+						<div class="flex end-xs pb-16">
+							<button mat-flat-button class="btn btn-warning">
+								<i class="fa fa-edit"></i>
+								<span class="btn-text">EDIT</span>
+							</button>
+							<button mat-flat-button class="btn btn-danger">
+								<i class="fa fa-trash"></i> 
+								<span class="btn-text">DELETE</span>
+							</button>
+						</div>
+					</mat-card-actions>
+				</mat-card>
+			</div>
+
+
+		</div>
+
+	</div>
+
+</div>

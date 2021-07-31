@@ -1,0 +1,74 @@
+@import '../../assets/styles/variable.scss';
+
+.rounded-image {
+	border-radius: 50% !important;
+	border: 1px solid grey;
+	width: 120px;
+	height: 120px;
+}
+
+.rounded-image img {
+	object-fit: cover;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+mat-card-actions button {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+mat-card-subtitle a {
+	text-decoration: none;
+}
+
+mat-card-subtitle i {
+	width: 32px;
+}
+
+.absen-in {
+	color: $color-success;
+	font-weight: bold; 
+}
+
+.absen-out {
+	color: $color-danger;
+	font-weight: bold; 
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+}
+.btn i {
+	width: 24px;
+	vertical-align: baseline;
+}
+.btn .btn-text {
+	vertical-align: baseline;
+}
+
+.employee-card {
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.search {
+	width: 100%;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	height: 48px;
+	margin-bottom: 16px;
+}
+
+.label {
+	background: #DDD;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	padding: 2px 4px;
+	color: #444;
+	font-size: bold;
+}
